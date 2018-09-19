@@ -16,7 +16,7 @@ class App extends Component {
     }
 
   handleUpClick(){
-    let upClick = this.state.value + 1;
+    let upClick = this.state.value + 3;
     this.setState({value: upClick });
   }
 
@@ -34,6 +34,7 @@ class App extends Component {
     return (
       <div className="App">
         <Counter
+          initValue={this.state.value}
           upClick={this.handleUpClick}
           downClick={this.handleDownClick}
           resetClick={this.handleReset} />
